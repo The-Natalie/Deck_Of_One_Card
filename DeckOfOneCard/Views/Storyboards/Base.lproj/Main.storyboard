@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="R01-Cn-ogS">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Card View Controller-->
+        <scene sceneID="sGY-0Z-TKh">
+            <objects>
+                <viewController id="R01-Cn-ogS" customClass="CardViewController" customModule="DeckOfOneCard" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IZa-P0-4L8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5sA-Zo-YTc">
+                                <rect key="frame" x="94" y="296" width="226" height="314"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="226" id="2Em-lj-MAz"/>
+                                    <constraint firstAttribute="height" constant="314" id="sNT-LQ-TvO"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Click &quot;Draw&quot; to begin" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S3u-NH-9FN">
+                                <rect key="frame" x="41.5" y="203.5" width="331" height="31.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <color key="textColor" red="0.30714666001238433" green="0.15211249345468517" blue="0.62761604733742105" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Yr-hO-gkM">
+                                <rect key="frame" x="145" y="773" width="124" height="44"/>
+                                <color key="backgroundColor" red="0.41718204040000001" green="0.2046630783" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                <state key="normal" title="Draw">
+                                    <color key="titleColor" red="0.8763848138" green="0.87409018969999996" blue="0.91417155729999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="drawButtonTapped:" destination="R01-Cn-ogS" eventType="touchUpInside" id="ceB-TL-5V9"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="dAx-36-yHn"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dAx-36-yHn" firstAttribute="bottom" secondItem="7Yr-hO-gkM" secondAttribute="bottom" constant="45" id="95D-7x-sn1"/>
+                            <constraint firstItem="5sA-Zo-YTc" firstAttribute="top" secondItem="S3u-NH-9FN" secondAttribute="bottom" constant="61" id="BID-Lm-RNC"/>
+                            <constraint firstItem="S3u-NH-9FN" firstAttribute="width" secondItem="IZa-P0-4L8" secondAttribute="width" multiplier="0.8" id="DsB-s2-A0P"/>
+                            <constraint firstItem="7Yr-hO-gkM" firstAttribute="centerX" secondItem="dAx-36-yHn" secondAttribute="centerX" id="QdJ-np-Xw7"/>
+                            <constraint firstItem="5sA-Zo-YTc" firstAttribute="centerY" secondItem="dAx-36-yHn" secondAttribute="centerY" id="cuz-Tr-xAi"/>
+                            <constraint firstItem="S3u-NH-9FN" firstAttribute="centerX" secondItem="dAx-36-yHn" secondAttribute="centerX" id="hpt-Q8-wWa"/>
+                            <constraint firstItem="5sA-Zo-YTc" firstAttribute="centerX" secondItem="dAx-36-yHn" secondAttribute="centerX" id="o5s-l6-MIl"/>
+                            <constraint firstItem="7Yr-hO-gkM" firstAttribute="width" secondItem="IZa-P0-4L8" secondAttribute="width" multiplier="0.3" id="xXq-qN-lgc"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cardImageView" destination="5sA-Zo-YTc" id="QCC-cQ-yFw"/>
+                        <outlet property="cardSuitLabel" destination="S3u-NH-9FN" id="4kw-qS-j1h"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZKM-Hs-mUX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="366" y="-254"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
